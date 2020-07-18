@@ -1,0 +1,13 @@
+<section>
+
+  <main>
+<form (ngSubmit)="submit()" class="container" [formGroup]="form" >
+  <div class="row col-8 ">
+      <input  type="text" formControlName="username"/>
+  </div>
+  <div class="row">
+    <button type="submit" class="btn btn-primary btn-block" >Login</button>
+  </div>
+</form>
+  </main>
+</section>

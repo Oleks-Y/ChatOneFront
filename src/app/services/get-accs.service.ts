@@ -15,8 +15,8 @@ export class GetAccsService {
     return this.http.get<User[]>(baseUrl + 'chat/allchats?currentId='+String(id))
 
   }
-
   getUser(id : number) : Observable<User>{
     return this.http.get<User>(baseUrl + 'chat/getUser?userid='+String(id))
   }
+
 }

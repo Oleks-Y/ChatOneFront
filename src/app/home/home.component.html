@@ -20,7 +20,7 @@
      <!-- / Navigation Bar -->
      <div class="container">
        <div class="row">
-         <div class="col-xs-12 col-md-3">
+         <div class="col-md-12 col-md-3">
            <aside class="main visible-md visible-lg">
              <div class="row">
                <div class="col-xs-12">
@@ -32,9 +32,9 @@
                        <p>Select a contact to chat with</p>
                    </div>
                    <div class="panel-body users__body">
-                     <ul id="contacts" class="list-group" *ngFor="let user of chats">
+                     <ul *ngFor="let user of chats" id="contacts" class="list-group" >
                          <a>
-                             <li >
+                             <li [routerLink]="['chat',user.id]" >
                                <div class="avatar"><!--image here--></div>
                                <span>{{user.name}}</span>
                                <div class="status-bar"></div>
@@ -50,7 +50,7 @@
 
 
          </div>
-         <div class="col-xs-12 col-md-9 chat__body">
+         <div class="col-xs-12 col-md-9 chat__body" [hidden]="true" >
            <div class="row">
              <div class="col-xs-12">
                <ul class="list-group chat__main">

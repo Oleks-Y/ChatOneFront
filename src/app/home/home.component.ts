@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
 
 
   }
+
+
   checkIfLogin(){
     var id = this.cookie.get('UserId')
     if(!id){

@@ -15,12 +15,14 @@ import {HttpClientModule} from '@angular/common/http';
 
 import {CookieService} from 'ngx-cookie-service';
 import {GetAccsService} from './services/get-accs.service';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
+    ChatComponent,
 
   ],
   imports: [

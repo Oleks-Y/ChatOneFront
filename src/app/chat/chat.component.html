@@ -4,22 +4,23 @@
 <!-- Add name of contact-->
 <div class="col-sm-3 col-sm-offset-4 frame" >
   <ul *ngFor="let message of conversations">
-    <li style="width:80%" *ngIf="message.sender_id == id">
+    <li style="width:80%" *ngIf="message.sender_id == id && show==true" >
       <div class="container">
         <p>{{message.message}}</p>
         <p> {{message.created_at | date:'MM/dd/yyyy'}}</p>
       </div>
     </li>
-    <li style="width:80%" *ngIf="message.sender_id == currentUserId">
+    <li style="width:80%" *ngIf="message.sender_id == currentUserId && show==true">
       <div class="container darker">
         <p>{{message.message}}</p>
         <p> {{message.created_at | date:'MM/dd/yyyy'}}</p>
       </div>
     </li>
+
   </ul>
   <div>
     <form (ngSubmit)="sendMessage()" class="container" [formGroup]="form" >
-    <div class="row col-8">
+    <div #scrollMe class="row col-8">
       <input type="text" formControlName="message"/>
     </div>
     <div class="row">

@@ -5,6 +5,9 @@ export class Conversation{
   message : string
   status : MessageStatus
   created_at: string
+  public constructor(message : string) {
+    this.message = message;
+  }
 }
 
 enum MessageStatus{
